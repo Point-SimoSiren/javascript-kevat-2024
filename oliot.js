@@ -19,12 +19,22 @@ var hakusana = ""
     } 
     
     else {
-        hakusana = data
-        autot.forEach(a => 
-       
+        hakusana = data.trim()
+        autot.forEach(a => {
+        if (a.merkki.toLowerCase().indexOf(hakusana.toLowerCase()) > -1) {
+        console.log("Merkki: " + a.merkki + "vm." + a.vuosimalli + "Hinta: " + a.hinta)
+        }
+        }
         )
     }}
  )
+
+ 
+
+
+
+
+
 
 // autot.forEach(auto => {
 //     // Black friday: poista kommentti
